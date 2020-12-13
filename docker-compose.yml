@@ -7,14 +7,14 @@ services:
     ports:
       - "3000:3000"
     volumes:
-       - ./apps/back:/usr/src/app/api
-       - /usr/src/app/api/node_modules
-#  angular:
-#    build:
-#      context: .
-#      dockerfile: conf/angular/Dockerfile
-#    ports:
-#      - "4201:4201"
-#    volumes:
-#       - ./apps/front:/usr/src/app/front
-#       - /usr/src/app/front/node_modules
+      - ./apps/back:/usr/src/app/api
+      - /usr/src/app/api/node_modules
+  angular:
+    build:
+      context: .
+      dockerfile: conf/angular/Dockerfile
+    ports:
+      - "4200:4200"
+    volumes:
+      - ./apps/front:/usr/src/app/front
+      - /usr/src/app/front/node_modules
