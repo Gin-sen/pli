@@ -1,5 +1,7 @@
 version: '3'
+
 services:
+
   node-api:
     build:
       context: .
@@ -9,6 +11,7 @@ services:
     volumes:
       - ./apps/back:/usr/src/app/api
       - /usr/src/app/api/node_modules
+
   angular:
     build:
       context: .
